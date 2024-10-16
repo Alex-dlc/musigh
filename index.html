@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* Apply the background to the entire page (body) */
+        body {
+            background-image: url('https://web.archive.org/web/20120103120820im_/http://musigh.com/wp-content/themes/sandbox/pattern_145.gif'); /* Replace with the path to your image */
+            background-repeat: repeat; /* This ensures the image tiles (repeats) */
+            background-size: auto; /* Ensures the image keeps its original size */
+        }
+    </style>
+
+    <title>Back to Top Button</title>
+    <style>
+        /* Styling for the button at the bottom of the page */
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background-color: #588ab9; /*Musigh blue*/
+            color: white;               /*Text color white */
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            display: none; /* Hidden initially */
+            
+        }
+    </style>
+    <style>
+        @font-face {
+            font-family: 'MyCustomFont';
+            src: url('fonts/MyCustomFont.woff2') format('woff2'),
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'MyCustomFont', sans-serif;
+        }
+    </style>
+    <!-- This div is for the header image/logo -->
+    <div id="title"> 
+        <h1 align="center">Musigh.net</h1> 
+        <p align="center">Scroll down to see the back-to-top button in action.</p>
+    </div>
+    
+</head>
+
+
+
+
+
+
+<body>
+
+
+
+    <div style="height: 1500px;"> 
+        <!-- This div is just to create space for scrolling -->
+    </div>
+
+    <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+
+    <script>
+        // Function to scroll smoothly to the top
+        function scrollToTop() {
+            // Top = point it scrolls up to
+            // Behaviour = Smooth or Instant
+            window.scrollTo({top: 0, behavior: 'smooth'});
+            //window.scrollToTop(); (Why doesnt this work?)
+        }
+
+        // Show the button when the user scrolls down 100px
+        window.onscroll = function() {
+            const button = document.getElementById('back-to-top');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        };
+    </script>
+    
+</body>
+</html>
