@@ -1,4 +1,4 @@
 # Musigh
 The Musigh Network
 
-Hello, welcome!
+Hello and welcome!
